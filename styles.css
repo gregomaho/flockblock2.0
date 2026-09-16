@@ -1,0 +1,278 @@
+/* ------------------------------
+   Basic Page Styling
+------------------------------ */
+
+* {
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+   line-height: 1.6;
+   background-color: #f4f4f4;
+   color: #222;
+}
+
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+header {
+   background-color: #1f2933;
+   color: white;
+   text-align: center;
+   padding: 30px 20px;
+}
+
+header h1 {
+   margin: 0;
+   font-size: 42px;
+}
+
+header p {
+   max-width: 700px;
+   margin: 10px auto 20px;
+}
+
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+nav {
+   margin-top: 20px;
+}
+
+nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+   padding: 8px 12px;
+   border-radius: 5px;
+}
+
+nav a:hover,
+nav a:focus {
+   background-color: #ffffff;
+   color: #1f2933;
+}
+
+
+/* ------------------------------
+   Mobile Menu Button
+------------------------------ */
+
+#menu-button {
+   display: none;
+
+   background-color: white;
+   color: #1f2933;
+
+   border: none;
+   border-radius: 5px;
+
+   padding: 10px 18px;
+
+   font-size: 16px;
+   font-weight: bold;
+
+   cursor: pointer;
+}
+
+#menu-button:hover,
+#menu-button:focus {
+   background-color: #dddddd;
+}
+
+
+/* ------------------------------
+   Main Content
+------------------------------ */
+
+main {
+   width: 90%;
+   max-width: 1000px;
+
+   margin: 30px auto;
+}
+
+
+/* ------------------------------
+   Sections
+------------------------------ */
+
+section {
+   background-color: white;
+
+   margin-bottom: 25px;
+   padding: 25px;
+
+   border-radius: 8px;
+
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+   margin-top: 0;
+   color: #1f2933;
+}
+
+
+/* ------------------------------
+   Concern Articles
+------------------------------ */
+
+article {
+   margin-top: 20px;
+   padding: 15px;
+
+   border-left: 4px solid #4b5563;
+
+   background-color: #f9f9f9;
+}
+
+article h3 {
+   margin-top: 0;
+   color: #333333;
+}
+
+
+/* ------------------------------
+   Links
+------------------------------ */
+
+main a {
+   color: #0056b3;
+}
+
+main a:hover,
+main a:focus {
+   text-decoration: underline;
+}
+
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+   background-color: #1f2933;
+   color: white;
+
+   text-align: center;
+
+   padding: 20px;
+   margin-top: 40px;
+}
+
+footer p {
+   margin: 0;
+}
+
+
+/* ------------------------------
+   Back To Top Button
+------------------------------ */
+
+#top-button {
+   display: none;
+
+   position: fixed;
+
+   right: 20px;
+   bottom: 20px;
+
+   background-color: #1f2933;
+   color: white;
+
+   border: none;
+   border-radius: 6px;
+
+   padding: 12px 16px;
+
+   font-size: 14px;
+   font-weight: bold;
+
+   cursor: pointer;
+
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#top-button:hover,
+#top-button:focus {
+   background-color: #4b5563;
+}
+
+
+/* ------------------------------
+   Accessibility
+------------------------------ */
+
+a:focus,
+button:focus {
+   outline: 3px solid #ffbf47;
+   outline-offset: 3px;
+}
+
+
+/* ------------------------------
+   Mobile / Responsive Styling
+------------------------------ */
+
+@media screen and (max-width: 600px) {
+
+   header h1 {
+      font-size: 32px;
+   }
+
+   #menu-button {
+      display: inline-block;
+   }
+
+   #nav-menu {
+      display: none;
+
+      flex-direction: column;
+
+      margin-top: 15px;
+      gap: 5px;
+   }
+
+   #nav-menu.show {
+      display: flex;
+   }
+
+   nav a {
+      display: block;
+      padding: 10px;
+   }
+
+   main {
+      width: 95%;
+   }
+
+   section {
+      padding: 18px;
+   }
+
+   #top-button {
+      right: 10px;
+      bottom: 10px;
+   }
+}

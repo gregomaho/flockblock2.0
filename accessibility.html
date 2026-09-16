@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Accessibility Considerations | Flock Block</title>
+
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+   <header>
+      <h1>Flock Block</h1>
+
+      <p>
+         Accessibility Considerations
+      </p>
+
+      <nav>
+
+         <button
+            id="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+            Menu
+         </button>
+
+         <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#concerns">Concerns</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+         </ul>
+
+      </nav>
+   </header>
+
+
+   <main>
+
+      <section>
+
+         <h2>Accessibility Considerations</h2>
+
+         <p>
+            Accessibility is an important part of the Flock Block website.
+            My goal is to make sure that people with different abilities can
+            easily read, understand, and navigate the information on this site.
+            I will use clear headings and properly organized HTML elements so
+            screen readers can understand the structure of each page. Images
+            added to the website will include descriptive alt text so users
+            who cannot see the images can still understand their purpose.
+         </p>
+
+         <p>
+            I will also use strong color contrast between text and backgrounds
+            to make the website easier to read. Links and buttons will be large
+            enough to select easily and will include visible focus indicators
+            for people who navigate with a keyboard. The website will also use
+            responsive design so that content remains readable on phones,
+            tablets, laptops, and desktop computers. I will avoid relying only
+            on color to communicate important information.
+         </p>
+
+         <p>
+            These choices are intended to follow common Web Content
+            Accessibility Guidelines, also known as WCAG. As the website
+            continues to develop, I will continue testing navigation,
+            readability, keyboard controls, image descriptions, and page
+            structure to make the site easier for as many users as possible
+            to access.
+         </p>
+
+      </section>
+
+
+      <section>
+
+         <h2>Accessibility Features Used</h2>
+
+         <ul>
+            <li>Clear page headings and sections</li>
+            <li>Keyboard-accessible navigation</li>
+            <li>Visible focus indicators</li>
+            <li>Readable color contrast</li>
+            <li>Responsive mobile design</li>
+            <li>Descriptive alt text for future images</li>
+            <li>Semantic HTML elements</li>
+         </ul>
+
+      </section>
+
+   </main>
+
+
+   <footer>
+
+      <p>
+         &copy; <span id="current-year"></span>
+         Flock Block | Educational Website Project
+      </p>
+
+   </footer>
+
+
+   <button
+      id="top-button"
+      type="button"
+      aria-label="Back to top">
+      Back to Top
+   </button>
+
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>
