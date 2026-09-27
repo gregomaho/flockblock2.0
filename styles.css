@@ -230,7 +230,30 @@ button:focus {
    outline-offset: 3px;
 }
 
+/* Homepage Image */
 
+.homepage-image {
+   max-width: 800px;
+   margin: 30px auto;
+   text-align: center;
+}
+
+.homepage-image img {
+   width: 100%;
+   height: auto;
+   border-radius: 8px;
+   display: block;
+}
+
+.homepage-image figcaption {
+   margin-top: 6px;
+   font-size: 12px;
+   color: #555555;
+}
+
+.homepage-image figcaption a {
+   color: #0056b3;
+}
 /* ------------------------------
    Mobile / Responsive Styling
 ------------------------------ */
