@@ -24,9 +24,13 @@ body {
 ------------------------------ */
 
 header {
+   position: relative;
+
    background-color: #1f2933;
    color: white;
+
    text-align: center;
+
    padding: 30px 20px;
 }
 
@@ -42,6 +46,23 @@ header p {
 
 
 /* ------------------------------
+   Flock Block Logo
+------------------------------ */
+
+.site-logo {
+   position: absolute;
+
+   top: 20px;
+   left: 25px;
+
+   width: 120px;
+   height: 120px;
+
+   object-fit: contain;
+}
+
+
+/* ------------------------------
    Navigation
 ------------------------------ */
 
@@ -51,19 +72,24 @@ nav {
 
 nav ul {
    list-style-type: none;
+
    padding: 0;
    margin: 0;
 
    display: flex;
    justify-content: center;
+
    gap: 20px;
 }
 
 nav a {
    color: white;
+
    text-decoration: none;
    font-weight: bold;
+
    padding: 8px 12px;
+
    border-radius: 5px;
 }
 
@@ -130,6 +156,7 @@ section {
 
 section h2 {
    margin-top: 0;
+
    color: #1f2933;
 }
 
@@ -149,6 +176,7 @@ article {
 
 article h3 {
    margin-top: 0;
+
    color: #333333;
 }
 
@@ -178,6 +206,7 @@ footer {
    text-align: center;
 
    padding: 20px;
+
    margin-top: 40px;
 }
 
@@ -230,38 +259,62 @@ button:focus {
    outline-offset: 3px;
 }
 
-/* Homepage Image */
+
+/* ------------------------------
+   Homepage Image
+------------------------------ */
 
 .homepage-image {
+   width: 90%;
    max-width: 800px;
+
    margin: 30px auto;
+
    text-align: center;
 }
 
 .homepage-image img {
    width: 100%;
    height: auto;
+
    border-radius: 8px;
+
    display: block;
 }
 
 .homepage-image figcaption {
    margin-top: 6px;
+
    font-size: 12px;
+
    color: #555555;
 }
 
 .homepage-image figcaption a {
    color: #0056b3;
 }
+
+
 /* ------------------------------
    Mobile / Responsive Styling
 ------------------------------ */
 
 @media screen and (max-width: 600px) {
 
+   header {
+      padding: 25px 15px;
+   }
+
    header h1 {
       font-size: 32px;
+   }
+
+   .site-logo {
+      width: 60px;
+      height: 60px;
+
+      top: 10px;
+      left: 10px;
    }
 
    #menu-button {
@@ -274,6 +327,7 @@ button:focus {
       flex-direction: column;
 
       margin-top: 15px;
+
       gap: 5px;
    }
 
@@ -283,6 +337,7 @@ button:focus {
 
    nav a {
       display: block;
+
       padding: 10px;
    }
 
