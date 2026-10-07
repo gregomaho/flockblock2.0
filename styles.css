@@ -100,6 +100,44 @@ nav a:focus {
    color: #1f2933;
 }
 
+/* ------------------------------
+   Thank You Page
+------------------------------ */
+
+.thank-you-section {
+   max-width: 700px;
+
+   margin: 60px auto;
+   padding: 40px;
+
+   text-align: center;
+}
+
+.thank-you-section h2 {
+   font-size: 36px;
+}
+
+.home-button {
+   display: inline-block;
+
+   margin-top: 20px;
+   padding: 12px 24px;
+
+   background-color: #1f2933;
+   color: white !important;
+
+   text-decoration: none;
+   font-weight: bold;
+
+   border-radius: 6px;
+}
+
+.home-button:hover,
+.home-button:focus {
+   background-color: #4b5563;
+
+   text-decoration: none;
+}
 
 /* ------------------------------
    Mobile Menu Button
