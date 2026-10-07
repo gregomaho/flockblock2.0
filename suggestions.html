@@ -1,0 +1,154 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>Suggestions | Flock Block</title>
+
+   <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+   <header>
+
+      <img
+         src="images/flockblock-logo.png"
+         alt="Flock Block logo"
+         class="site-logo">
+
+      <h1>Flock Block</h1>
+
+      <p>
+         Learn more about automated license plate reader cameras
+         and their impact on communities.
+      </p>
+
+      <nav>
+
+         <button
+            id="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+            Menu
+         </button>
+
+         <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="concerns.html">Concerns</a></li>
+            <li><a href="index.html#resources">Resources</a></li>
+            <li><a href="suggestions.html">Suggestions</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+         </ul>
+
+      </nav>
+
+   </header>
+
+
+   <main>
+
+      <section class="suggestions-section">
+
+         <h2>Suggestions</h2>
+
+         <p>
+            Have an idea for improving Flock Block? Use the form below
+            to send us a suggestion. You can recommend new topics,
+            resources, website features, or other improvements.
+         </p>
+
+         <form
+            action="https://formsubmit.co/flockblockadmin@gmail.com"
+            method="POST">
+
+            <p>
+               <label for="username">
+                  Name or Username:
+               </label>
+
+               <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  maxlength="30"
+                  required>
+            </p>
+
+
+            <p>
+               <label for="email">
+                  Email Address:
+               </label>
+
+               <input
+                  type="email"
+                  id="email"
+                  name="email">
+            </p>
+
+
+            <p>
+               <label for="suggestion">
+                  Your Suggestion:
+               </label>
+
+               <textarea
+                  id="suggestion"
+                  name="suggestion"
+                  rows="8"
+                  maxlength="1000"
+                  required></textarea>
+            </p>
+
+
+            <input
+               type="hidden"
+               name="_subject"
+               value="New Flock Block Suggestion">
+
+            <input
+               type="hidden"
+               name="_captcha"
+               value="false">
+
+
+            <button type="submit">
+               Submit Suggestion
+            </button>
+
+         </form>
+
+      </section>
+
+   </main>
+
+
+   <footer>
+
+      <p>
+         &copy; <span id="current-year"></span>
+         Flock Block | Educational Website Project
+      </p>
+
+   </footer>
+
+
+   <button
+      id="top-button"
+      type="button"
+      aria-label="Back to top">
+      Back to Top
+   </button>
+
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>
+```
