@@ -301,13 +301,49 @@ article h3 {
 ------------------------------ */
 
 main a {
-   color: #0056b3;
+   color: #004a99;
 }
 
 main a:hover,
 main a:focus {
    text-decoration: underline;
 }
+
+
+/* ------------------------------
+   Homepage Image
+------------------------------ */
+
+.homepage-image {
+   width: 90%;
+   max-width: 800px;
+
+   margin: 30px auto;
+
+   text-align: center;
+}
+
+.homepage-image img {
+   width: 100%;
+   height: auto;
+
+   border-radius: 8px;
+
+   display: block;
+}
+
+.homepage-image figcaption {
+   margin-top: 6px;
+
+   font-size: 12px;
+
+   color: #444444;
+}
+
+.homepage-image figcaption a {
+   color: #004a99;
+}
+
 
 
 /* ------------------------------
