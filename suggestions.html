@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +27,9 @@
          and their impact on communities.
       </p>
 
-      <nav>
+      <!-- Main Navigation -->
+
+      <nav aria-label="Main navigation">
 
          <button
             id="menu-button"
@@ -37,11 +40,73 @@
          </button>
 
          <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="concerns.html">Concerns</a></li>
-            <li><a href="index.html#resources">Resources</a></li>
-            <li><a href="suggestions.html">Suggestions</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
+
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+
+            <!-- Concerns Dropdown -->
+
+            <li class="dropdown">
+
+               <button
+                  class="dropdown-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="concerns-submenu">
+                  Concerns
+                  <span aria-hidden="true">&#9662;</span>
+               </button>
+
+               <ul
+                  id="concerns-submenu"
+                  class="dropdown-menu"
+                  hidden>
+
+                  <li>
+                     <a href="concerns.html">
+                        Overview of Concerns
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="privacy.html">
+                        Privacy
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="data-collection.html">
+                        Data Collection
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="transparency.html">
+                        Transparency and Oversight
+                     </a>
+                  </li>
+
+               </ul>
+
+            </li>
+
+            <li>
+               <a href="index.html#resources">Resources</a>
+            </li>
+
+            <li>
+               <a href="suggestions.html" aria-current="page">
+                  Suggestions
+               </a>
+            </li>
+
+            <li>
+               <a href="accessibility.html">
+                  Accessibility
+               </a>
+            </li>
+
          </ul>
 
       </nav>
@@ -50,6 +115,8 @@
 
 
    <main>
+
+      <!-- Suggestions Form -->
 
       <section class="suggestions-section">
 
@@ -81,6 +148,8 @@
                value="https://gregomaho.github.io/flockblock2.0/thank-you.html">
 
 
+            <!-- Username -->
+
             <p>
                <label for="username">
                   Name or Username:
@@ -95,6 +164,8 @@
             </p>
 
 
+            <!-- Email Address -->
+
             <p>
                <label for="email">
                   Email Address:
@@ -106,6 +177,8 @@
                   name="email">
             </p>
 
+
+            <!-- Suggestion Message -->
 
             <p>
                <label for="suggestion">
@@ -121,6 +194,8 @@
             </p>
 
 
+            <!-- Submit Button -->
+
             <button type="submit">
                Submit Suggestion
             </button>
@@ -132,6 +207,8 @@
    </main>
 
 
+   <!-- Footer -->
+
    <footer>
 
       <p>
@@ -141,6 +218,8 @@
 
    </footer>
 
+
+   <!-- Back to Top Button -->
 
    <button
       id="top-button"
