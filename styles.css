@@ -563,3 +563,162 @@ button:focus {
       padding-left: 30px;
    }
 }
+
+/* --------------------------------
+   Navigation Dropdown Fixes
+-------------------------------- */
+
+/* Keep the main navigation horizontal */
+#nav-menu {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 20px;
+}
+
+/* Make Concerns button match other links */
+.dropdown-button {
+   display: inline-block;
+   background: transparent;
+   border: none;
+   border-radius: 5px;
+
+   color: white;
+   font-family: inherit;
+   font-size: inherit;
+   font-weight: bold;
+
+   padding: 8px 12px;
+   cursor: pointer;
+}
+
+/* Keyboard and mouse highlighting */
+.dropdown-button:hover,
+.dropdown-button:focus-visible {
+   background-color: white;
+   color: #1f2933;
+}
+
+/* Stack dropdown links vertically */
+#nav-menu .dropdown-menu {
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   gap: 0;
+
+   position: absolute;
+   top: 100%;
+   left: 0;
+
+   min-width: 240px;
+   z-index: 1000;
+
+   background-color: #1f2933;
+   border-radius: 6px;
+
+   padding: 6px 0;
+}
+
+/* Hide dropdown until clicked */
+#nav-menu .dropdown-menu[hidden] {
+   display: none !important;
+}
+
+/* Dropdown links */
+#nav-menu .dropdown-menu a {
+   display: block;
+   text-align: left;
+   padding: 12px 16px;
+   border-radius: 0;
+}
+
+/* Highlight dropdown links */
+#nav-menu .dropdown-menu a:hover,
+#nav-menu .dropdown-menu a:focus-visible {
+   background-color: white;
+   color: #1f2933;
+}
+
+
+/* --------------------------------
+   Mobile Navigation
+-------------------------------- */
+
+@media (max-width: 768px) {
+
+   /* Display mobile menu button */
+   #menu-button {
+      display: inline-block;
+   }
+
+   /* Hide navigation links by default */
+   #nav-menu {
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+
+      width: 100%;
+      margin-top: 15px;
+      gap: 5px;
+   }
+
+   /* Show menu when JavaScript adds .show */
+   #nav-menu.show {
+      display: flex;
+   }
+
+   /* Full-width mobile navigation links */
+   #nav-menu > li {
+      width: 100%;
+   }
+
+   #nav-menu > li > a,
+   #nav-menu > li > .dropdown-button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+   }
+
+   /* Show the Concerns submenu below its button */
+   #nav-menu .dropdown-menu {
+      position: static;
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+      min-width: 0;
+
+      padding: 0;
+      margin: 0;
+
+      background-color: #374151;
+      box-shadow: none;
+   }
+
+   /* Keep submenu hidden until clicked */
+   #nav-menu .dropdown-menu[hidden] {
+      display: none !important;
+   }
+
+   /* Indent submenu links */
+   #nav-menu .dropdown-menu a {
+      padding: 12px 30px;
+   }
+
+   /* Prevent logo from overlapping header */
+   .site-logo {
+      position: static;
+      display: block;
+
+      width: 100px;
+      height: 100px;
+
+      margin: 0 auto 15px;
+   }
+
+   header h1 {
+      font-size: 32px;
+   }
+}
