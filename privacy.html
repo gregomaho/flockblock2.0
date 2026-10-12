@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,22 @@
 <body>
 
    <header>
+
+      <img
+         src="images/flockblock-logo.png"
+         alt="Flock Block logo"
+         class="site-logo">
+
       <h1>Flock Block</h1>
 
-      <p>Privacy concerns involving automated license plate readers.</p>
+      <p>
+         Privacy concerns involving automated
+         license plate readers.
+      </p>
 
-      <nav>
+      <!-- Main Navigation -->
+
+      <nav aria-label="Main navigation">
 
          <button
             id="menu-button"
@@ -28,112 +40,201 @@
          </button>
 
          <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
-            <li><a href="data-collection.html">Data Collection</a></li>
-            <li><a href="transparency.html">Transparency</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
+
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+
+            <!-- Concerns Dropdown -->
+
+            <li class="dropdown">
+
+               <button
+                  class="dropdown-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="concerns-submenu">
+                  Concerns
+                  <span aria-hidden="true">&#9662;</span>
+               </button>
+
+               <ul
+                  id="concerns-submenu"
+                  class="dropdown-menu"
+                  hidden>
+
+                  <li>
+                     <a href="concerns.html">
+                        Overview of Concerns
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="privacy.html"
+                        aria-current="page">
+                        Privacy
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="data-collection.html">
+                        Data Collection
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="transparency.html">
+                        Transparency and Oversight
+                     </a>
+                  </li>
+
+               </ul>
+
+            </li>
+
+            <li>
+               <a href="index.html#resources">
+                  Resources
+               </a>
+            </li>
+
+            <li>
+               <a href="suggestions.html">
+                  Suggestions
+               </a>
+            </li>
+
+            <li>
+               <a href="accessibility.html">
+                  Accessibility
+               </a>
+            </li>
+
          </ul>
 
       </nav>
+
    </header>
 
 
    <main>
+
+      <!-- Privacy Information -->
 
       <section>
 
          <h2>Privacy Concerns</h2>
 
          <p>
-            Automated license plate reader cameras are designed to photograph
-            vehicles and identify license plate numbers. These systems can help
-            law enforcement locate vehicles connected to investigations, but
-            they can also raise privacy concerns.
+            Automated license plate reader cameras are designed to
+            photograph vehicles and identify license plate numbers.
+            These systems can help law enforcement locate vehicles
+            connected to investigations, but they can also raise
+            privacy concerns.
          </p>
 
          <p>
-            One concern is that a license plate reader can record when and
-            where a vehicle was seen. When information from many cameras is
-            combined, it may create a record of a vehicle's movements over
-            time.
+            One concern is that a license plate reader can record
+            when and where a vehicle was seen. When information
+            from many cameras is combined, it may create a record
+            of a vehicle's movements over time.
          </p>
 
          <p>
-            This creates questions about how much location information should
-            be collected about people who are not suspected of committing a
-            crime. Communities may also want to understand what protections
-            exist to prevent this information from being misused.
+            This creates questions about how much location
+            information should be collected about people who
+            are not suspected of committing a crime.
+            Communities may also want to understand what
+            protections exist to prevent this information
+            from being misused.
          </p>
 
       </section>
+
+
+      <!-- Questions to Consider -->
 
       <section>
 
          <h2>Questions to Consider</h2>
 
          <ul>
-            <li>When should vehicle location information be collected?</li>
-            <li>Who should be allowed to search the information?</li>
-            <li>Should a warrant be required in certain situations?</li>
-            <li>How can innocent drivers' privacy be protected?</li>
+            <li>
+               When should vehicle location information be collected?
+            </li>
+            <li>
+               Who should be allowed to search the information?
+            </li>
+            <li>
+               Should a warrant be required in certain situations?
+            </li>
+            <li>
+               How can innocent drivers' privacy be protected?
+            </li>
          </ul>
 
       </section>
 
-      
-         <!-- Privacy News Section -->
 
-         <section id="privacy-news">
+      <!-- Privacy News Section -->
 
-            <h2>Privacy Concerns in the News</h2>
+      <section id="privacy-news">
 
-            <article>
+         <h2>Privacy Concerns in the News</h2>
 
-               <h3>Indianapolis Police Officers Charged
-                  With Misusing Flock Cameras</h3>
+         <article>
 
-               <p>
-                  A WFYI news article published on September 24, 2026,
-                  reports that five Indianapolis police officers
-                  were charged with allegedly misusing Flock camera
-                  systems. The case raises questions about how
-                  surveillance data is accessed, who is allowed
-                  to use the information, and how agencies
-                  prevent unauthorized searches.
-               </p>
+            <h3>
+               Indianapolis Police Officers Charged
+               With Misusing Flock Cameras
+            </h3>
 
-               <p>
-                  This example shows why privacy protections,
-                  clear rules, and accountability are important
-                  when law enforcement agencies use automated
-                  license plate reader technology.
-               </p>
+            <p>
+               A WFYI news article published on September 24, 2026,
+               reports that five Indianapolis police officers
+               were charged with allegedly misusing Flock camera
+               systems. The case raises questions about how
+               surveillance data is accessed, who is allowed
+               to use the information, and how agencies
+               prevent unauthorized searches.
+            </p>
 
-               <p>
-                  <a
-                     href="https://www.wfyi.org/wfyi-news/2026-09-24/five-indianapolis-police-officers-charged-for-misusing-flock-cameras"
-                     target="_blank"
-                     rel="noopener noreferrer">
-                     Read the Full WFYI Article
-                  </a>
-               </p>
+            <p>
+               This example shows why privacy protections,
+               clear rules, and accountability are important
+               when law enforcement agencies use automated
+               license plate reader technology.
+            </p>
 
-            </article>
+            <p>
+               <a
+                  href="https://www.wfyi.org/wfyi-news/2026-09-24/five-indianapolis-police-officers-charged-for-misusing-flock-cameras"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Read the Full WFYI Article
+               </a>
+            </p>
 
-         </section>
+         </article>
 
+      </section>
 
    </main>
 
 
+   <!-- Footer -->
+
    <footer>
+
       <p>
          &copy; <span id="current-year"></span>
          Flock Block | Educational Website Project
       </p>
+
    </footer>
 
+
+   <!-- Back to Top Button -->
 
    <button
       id="top-button"

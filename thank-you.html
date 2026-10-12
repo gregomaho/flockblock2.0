@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,10 +27,98 @@
          and their impact on communities.
       </p>
 
+      <!-- Main Navigation -->
+
+      <nav aria-label="Main navigation">
+
+         <button
+            id="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+            Menu
+         </button>
+
+         <ul id="nav-menu">
+
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+
+            <!-- Concerns Dropdown -->
+
+            <li class="dropdown">
+
+               <button
+                  class="dropdown-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="concerns-submenu">
+                  Concerns
+                  <span aria-hidden="true">&#9662;</span>
+               </button>
+
+               <ul
+                  id="concerns-submenu"
+                  class="dropdown-menu"
+                  hidden>
+
+                  <li>
+                     <a href="concerns.html">
+                        Overview of Concerns
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="privacy.html">
+                        Privacy
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="data-collection.html">
+                        Data Collection
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="transparency.html">
+                        Transparency and Oversight
+                     </a>
+                  </li>
+
+               </ul>
+
+            </li>
+
+            <li>
+               <a href="index.html#resources">
+                  Resources
+               </a>
+            </li>
+
+            <li>
+               <a href="suggestions.html">
+                  Suggestions
+               </a>
+            </li>
+
+            <li>
+               <a href="accessibility.html">
+                  Accessibility
+               </a>
+            </li>
+
+         </ul>
+
+      </nav>
+
    </header>
 
 
    <main>
+
+      <!-- Thank You Message -->
 
       <section class="thank-you-section">
 
@@ -54,6 +143,8 @@
    </main>
 
 
+   <!-- Footer -->
+
    <footer>
 
       <p>
@@ -62,6 +153,17 @@
       </p>
 
    </footer>
+
+
+   <!-- Back to Top Button -->
+
+   <button
+      id="top-button"
+      type="button"
+      aria-label="Back to top">
+      Back to Top
+   </button>
+
 
    <script src="script.js"></script>
 
