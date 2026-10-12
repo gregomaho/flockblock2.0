@@ -26,12 +26,9 @@ body {
 
 header {
    position: relative;
-
    background-color: #1f2933;
    color: white;
-
    text-align: center;
-
    padding: 30px 20px;
 }
 
@@ -52,92 +49,155 @@ header p {
 
 .site-logo {
    position: absolute;
-
    top: 20px;
    left: 25px;
-
    width: 120px;
    height: 120px;
-
    object-fit: contain;
 }
 
 
 /* ------------------------------
-   Navigation
+   Main Navigation
 ------------------------------ */
 
 nav {
    margin-top: 20px;
 }
 
-nav ul {
-   list-style-type: none;
-
-   padding: 0;
-   margin: 0;
-
+#nav-menu {
    display: flex;
    justify-content: center;
-
+   align-items: center;
+   flex-wrap: wrap;
    gap: 20px;
+
+   list-style: none;
+   padding: 0;
+   margin: 0;
 }
 
-nav a {
-   color: white;
+#nav-menu > li {
+   position: relative;
+   display: flex;
+   align-items: center;
+}
 
-   text-decoration: none;
-   font-weight: bold;
+/* Main navigation links */
+
+#nav-menu > li > a {
+   display: inline-flex;
+   align-items: center;
 
    padding: 8px 12px;
+
+   color: white;
+   font-size: 16px;
+   font-weight: bold;
+   line-height: 1.6;
+   text-decoration: none;
 
    border-radius: 5px;
 }
 
-nav a:hover,
-nav a:focus {
-   background-color: #ffffff;
+#nav-menu > li > a:hover,
+#nav-menu > li > a:focus-visible {
+   background-color: white;
    color: #1f2933;
 }
 
+
 /* ------------------------------
-   Thank You Page
+   Concerns Dropdown Button
 ------------------------------ */
 
-.thank-you-section {
-   max-width: 700px;
+.dropdown-button {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 6px;
 
-   margin: 60px auto;
-   padding: 40px;
+   padding: 8px 12px;
+   margin: 0;
 
-   text-align: center;
-}
+   background: transparent;
+   color: white;
 
-.thank-you-section h2 {
-   font-size: 36px;
-}
+   border: none;
+   border-radius: 5px;
 
-.home-button {
-   display: inline-block;
-
-   margin-top: 20px;
-   padding: 12px 24px;
-
-   background-color: #1f2933;
-   color: white !important;
-
-   text-decoration: none;
+   font-family: inherit;
+   font-size: 16px;
    font-weight: bold;
+   line-height: 1.6;
 
+   cursor: pointer;
+}
+
+.dropdown-button:hover,
+.dropdown-button:focus-visible {
+   background-color: white;
+   color: #1f2933;
+}
+
+
+/* ------------------------------
+   Concerns Dropdown Menu
+------------------------------ */
+
+#nav-menu .dropdown-menu {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1000;
+
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   justify-content: flex-start;
+   gap: 0;
+
+   width: 260px;
+   min-width: 260px;
+
+   padding: 6px 0;
+   margin: 0;
+
+   list-style: none;
+   background-color: #1f2933;
    border-radius: 6px;
+
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-.home-button:hover,
-.home-button:focus {
-   background-color: #4b5563;
+#nav-menu .dropdown-menu[hidden] {
+   display: none !important;
+}
 
+#nav-menu .dropdown-menu li {
+   display: block;
+   width: 100%;
+}
+
+#nav-menu .dropdown-menu a {
+   display: block;
+   width: 100%;
+   padding: 12px 16px;
+
+   color: white;
+   font-size: 16px;
+   font-weight: bold;
+   text-align: left;
    text-decoration: none;
+   border-radius: 0;
 }
+
+#nav-menu .dropdown-menu a:hover,
+#nav-menu .dropdown-menu a:focus-visible {
+   background-color: white;
+   color: #1f2933;
+}
+
 
 /* ------------------------------
    Mobile Menu Button
@@ -161,7 +221,7 @@ nav a:focus {
 }
 
 #menu-button:hover,
-#menu-button:focus {
+#menu-button:focus-visible {
    background-color: #dddddd;
 }
 
@@ -173,7 +233,6 @@ nav a:focus {
 main {
    width: 90%;
    max-width: 1000px;
-
    margin: 30px auto;
 }
 
@@ -184,18 +243,14 @@ main {
 
 section {
    background-color: white;
-
    margin-bottom: 25px;
    padding: 25px;
-
    border-radius: 8px;
-
    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 section h2 {
    margin-top: 0;
-
    color: #1f2933;
 }
 
@@ -207,97 +262,18 @@ section h2 {
 article {
    margin-top: 20px;
    padding: 15px;
-
    border-left: 4px solid #4b5563;
-
    background-color: #f9f9f9;
 }
 
 article h3 {
    margin-top: 0;
-
    color: #333333;
 }
 
 
 /* ------------------------------
-   Suggestions Form
------------------------------- */
-
-.suggestions-section {
-   max-width: 750px;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-.suggestions-section form {
-   margin-top: 25px;
-}
-
-.suggestions-section label {
-   display: inline-block;
-
-   margin-bottom: 5px;
-
-   font-weight: bold;
-   color: #1f2933;
-}
-
-.suggestions-section input[type="text"],
-.suggestions-section input[type="email"],
-.suggestions-section textarea {
-   width: 100%;
-
-   padding: 12px;
-
-   border: 1px solid #999999;
-   border-radius: 5px;
-
-   font-family: Arial, Helvetica, sans-serif;
-   font-size: 16px;
-
-   background-color: white;
-   color: #222222;
-}
-
-.suggestions-section textarea {
-   min-height: 160px;
-
-   resize: vertical;
-}
-
-.suggestions-section input[type="text"]:focus,
-.suggestions-section input[type="email"]:focus,
-.suggestions-section textarea:focus {
-   border-color: #1f2933;
-
-   outline: 3px solid #ffbf47;
-   outline-offset: 2px;
-}
-
-.suggestions-section button[type="submit"] {
-   background-color: #1f2933;
-   color: white;
-
-   border: none;
-   border-radius: 6px;
-
-   padding: 12px 20px;
-
-   font-size: 16px;
-   font-weight: bold;
-
-   cursor: pointer;
-}
-
-.suggestions-section button[type="submit"]:hover,
-.suggestions-section button[type="submit"]:focus {
-   background-color: #374151;;
-}
-
-
-/* ------------------------------
-   Links
+   General Links
 ------------------------------ */
 
 main a {
@@ -305,7 +281,7 @@ main a {
 }
 
 main a:hover,
-main a:focus {
+main a:focus-visible {
    text-decoration: underline;
 }
 
@@ -317,27 +293,21 @@ main a:focus {
 .homepage-image {
    width: 90%;
    max-width: 800px;
-
    margin: 30px auto;
-
    text-align: center;
 }
 
 .homepage-image img {
+   display: block;
    width: 100%;
    height: auto;
-
    border-radius: 8px;
-
-   display: block;
 }
 
 .homepage-image figcaption {
    margin-top: 6px;
-
    font-size: 12px;
-
-   color: #444444;
+   color: #555555;
 }
 
 .homepage-image figcaption a {
@@ -345,103 +315,9 @@ main a:focus {
 }
 
 
-
 /* ------------------------------
-   Footer
+   Concerns Page Image
 ------------------------------ */
-
-footer {
-   background-color: #1f2933;
-   color: white;
-
-   text-align: center;
-
-   padding: 20px;
-
-   margin-top: 40px;
-}
-
-footer p {
-   margin: 0;
-}
-
-
-/* ------------------------------
-   Back To Top Button
------------------------------- */
-
-#top-button {
-   display: none;
-
-   position: fixed;
-
-   right: 20px;
-   bottom: 20px;
-
-   background-color: #1f2933;
-   color: white;
-
-   border: none;
-   border-radius: 6px;
-
-   padding: 12px 16px;
-
-   font-size: 14px;
-   font-weight: bold;
-
-   cursor: pointer;
-
-   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-#top-button:hover,
-#top-button:focus {
-   background-color: #4b5563;
-}
-
-
-/* ------------------------------
-   Accessibility
------------------------------- */
-
-a:focus,
-button:focus {
-   outline: 3px solid #ffbf47;
-   outline-offset: 3px;
-}
-
-
-/* ------------------------------
-   Homepage Image
------------------------------- */
-
-.homepage-image {
-   width: 90%;
-   max-width: 800px;
-
-   margin: 30px auto;
-
-   text-align: center;
-}
-
-.homepage-image img {
-   width: 100%;
-   height: auto;
-
-   border-radius: 8px;
-
-   display: block;
-}
-
-.homepage-image figcaption {
-   margin-top: 6px;
-
-   font-size: 12px;
-
-   color: #555555;
-}
-
-/* Concerns Page Image */
 
 .concerns-image {
    width: 100%;
@@ -464,7 +340,6 @@ button:focus {
    font-size: 0.85rem;
    line-height: 1.4;
    color: #555;
-   text-align: center;
 }
 
 .concerns-image a {
@@ -476,217 +351,251 @@ button:focus {
    color: #003d6b;
 }
 
-@media (max-width: 600px) {
-   .concerns-image {
-      max-width: 100%;
-      margin: 20px auto;
-   }
 
-   .concerns-image figcaption {
-      font-size: 0.8rem;
-   }
+/* ------------------------------
+   Suggestions Form
+------------------------------ */
+
+.suggestions-section {
+   max-width: 750px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-
-/* Concerns Dropdown Menu */
-
-#nav-menu .dropdown {
-   position: relative;
+.suggestions-section form {
+   margin-top: 25px;
 }
 
-.dropdown-button {
-   background: transparent;
-   border: none;
+.suggestions-section label {
+   display: inline-block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #1f2933;
+}
+
+.suggestions-section input[type="text"],
+.suggestions-section input[type="email"],
+.suggestions-section textarea {
+   width: 100%;
+   padding: 12px;
+
+   border: 1px solid #999999;
+   border-radius: 5px;
+
+   font-family: inherit;
+   font-size: 16px;
+
+   background-color: white;
+   color: #222;
+}
+
+.suggestions-section textarea {
+   min-height: 160px;
+   resize: vertical;
+}
+
+.suggestions-section input[type="text"]:focus,
+.suggestions-section input[type="email"]:focus,
+.suggestions-section textarea:focus {
+   border-color: #1f2933;
+   outline: 3px solid #ffbf47;
+   outline-offset: 2px;
+}
+
+.suggestions-section button[type="submit"] {
+   background-color: #1f2933;
    color: white;
-   font: inherit;
+
+   border: none;
+   border-radius: 6px;
+
+   padding: 12px 20px;
+
+   font-size: 16px;
+   font-weight: bold;
+
    cursor: pointer;
-   padding: 10px 15px;
 }
 
-.dropdown-button:hover,
-.dropdown-button:focus-visible {
+.suggestions-section button[type="submit"]:hover,
+.suggestions-section button[type="submit"]:focus-visible {
    background-color: #374151;
 }
 
-#nav-menu .dropdown-menu {
-   position: absolute;
-   top: 100%;
-   left: 0;
-   z-index: 1000;
 
-   min-width: 230px;
-   margin: 0;
-   padding: 0;
+/* ------------------------------
+   Thank You Page
+------------------------------ */
+
+.thank-you-section {
+   max-width: 700px;
+   margin: 60px auto;
+   padding: 40px;
+   text-align: center;
+}
+
+.thank-you-section h2 {
+   font-size: 36px;
+   color: #1f2933;
+}
+
+.thank-you-section p {
+   font-size: 17px;
+}
+
+.home-button {
+   display: inline-block;
+
+   margin-top: 20px;
+   padding: 12px 24px;
 
    background-color: #1f2933;
-   list-style: none;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   color: white !important;
+
+   text-decoration: none;
+   font-weight: bold;
+
+   border-radius: 6px;
 }
 
-#nav-menu .dropdown-menu[hidden] {
-   display: none !important;
-}
-
-#nav-menu .dropdown-menu li {
-   display: block;
-}
-
-#nav-menu .dropdown-menu a {
-   display: block;
-   padding: 12px 16px;
-   color: white;
+.home-button:hover,
+.home-button:focus-visible {
+   background-color: #4b5563;
+   color: white !important;
    text-decoration: none;
 }
 
-#nav-menu .dropdown-menu a:hover,
-#nav-menu .dropdown-menu a:focus-visible {
-   background-color: #374151;
-}
 
-/* Mobile Dropdown */
+/* ------------------------------
+   Footer
+------------------------------ */
 
-@media (max-width: 768px) {
-   #nav-menu .dropdown-menu {
-      position: static;
-      min-width: 0;
-      width: 100%;
-      box-shadow: none;
-      background-color: #374151;
-   }
-
-   .dropdown-button {
-      width: 100%;
-      text-align: left;
-   }
-
-   #nav-menu .dropdown-menu a {
-      padding-left: 30px;
-   }
-}
-
-/* --------------------------------
-   Navigation Dropdown Fixes
--------------------------------- */
-
-/* Keep the main navigation horizontal */
-#nav-menu {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   gap: 20px;
-}
-
-/* Make Concerns button match other links */
-.dropdown-button {
-   display: inline-block;
-   background: transparent;
-   border: none;
-   border-radius: 5px;
-
+footer {
+   background-color: #1f2933;
    color: white;
-   font-family: inherit;
-   font-size: inherit;
-   font-weight: bold;
-
-   padding: 8px 12px;
-   cursor: pointer;
+   text-align: center;
+   padding: 20px;
+   margin-top: 40px;
 }
 
-/* Keyboard and mouse highlighting */
-.dropdown-button:hover,
-.dropdown-button:focus-visible {
-   background-color: white;
-   color: #1f2933;
+footer p {
+   margin: 0;
 }
 
-/* Stack dropdown links vertically */
-#nav-menu .dropdown-menu {
-   display: flex;
-   flex-direction: column;
-   align-items: stretch;
-   gap: 0;
 
-   position: absolute;
-   top: 100%;
-   left: 0;
+/* ------------------------------
+   Back to Top Button
+------------------------------ */
 
-   min-width: 240px;
-   z-index: 1000;
+#top-button {
+   display: none;
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   z-index: 900;
 
    background-color: #1f2933;
+   color: white;
+
+   border: none;
    border-radius: 6px;
 
-   padding: 6px 0;
-}
-
-/* Hide dropdown until clicked */
-#nav-menu .dropdown-menu[hidden] {
-   display: none !important;
-}
-
-/* Dropdown links */
-#nav-menu .dropdown-menu a {
-   display: block;
-   text-align: left;
    padding: 12px 16px;
-   border-radius: 0;
+
+   font-size: 14px;
+   font-weight: bold;
+
+   cursor: pointer;
+
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Highlight dropdown links */
-#nav-menu .dropdown-menu a:hover,
-#nav-menu .dropdown-menu a:focus-visible {
-   background-color: white;
-   color: #1f2933;
+#top-button:hover,
+#top-button:focus-visible {
+   background-color: #4b5563;
 }
 
 
-/* --------------------------------
-   Mobile Navigation
--------------------------------- */
+/* ------------------------------
+   Accessibility
+------------------------------ */
+
+a:focus-visible,
+button:focus-visible {
+   outline: 3px solid #ffbf47;
+   outline-offset: 3px;
+}
+
+
+/* ------------------------------
+   Mobile Navigation and Layout
+------------------------------ */
 
 @media (max-width: 768px) {
 
+   /* Center logo above title */
+
+   .site-logo {
+      position: static;
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 15px;
+   }
+
+   header h1 {
+      font-size: 32px;
+   }
+
+   header {
+      padding: 20px 15px;
+   }
+
    /* Display mobile menu button */
+
    #menu-button {
       display: inline-block;
    }
 
-   /* Hide navigation links by default */
+   /* Hide navigation by default */
+
    #nav-menu {
       display: none;
       flex-direction: column;
       align-items: stretch;
+      flex-wrap: nowrap;
 
       width: 100%;
       margin-top: 15px;
       gap: 5px;
    }
 
-   /* Show menu when JavaScript adds .show */
+   /* Open navigation on click */
+
    #nav-menu.show {
       display: flex;
    }
 
-   /* Full-width mobile navigation links */
+   /* Stack main navigation links */
+
    #nav-menu > li {
+      display: block;
       width: 100%;
    }
 
    #nav-menu > li > a,
-   #nav-menu > li > .dropdown-button {
-      display: block;
+   #nav-menu .dropdown-button {
+      display: flex;
       width: 100%;
+      justify-content: flex-start;
       text-align: left;
       padding: 12px 16px;
    }
 
-   /* Show the Concerns submenu below its button */
+   /* Dropdown within mobile navigation */
+
    #nav-menu .dropdown-menu {
       position: static;
-      display: flex;
-      flex-direction: column;
-
       width: 100%;
       min-width: 0;
 
@@ -697,108 +606,83 @@ button:focus {
       box-shadow: none;
    }
 
-   /* Keep submenu hidden until clicked */
-   #nav-menu .dropdown-menu[hidden] {
-      display: none !important;
-   }
-
-   /* Indent submenu links */
    #nav-menu .dropdown-menu a {
       padding: 12px 30px;
    }
 
-   /* Prevent logo from overlapping header */
-   .site-logo {
-      position: static;
-      display: block;
+   /* Main content */
 
-      width: 100px;
-      height: 100px;
-
-      margin: 0 auto 15px;
+   main {
+      width: 95%;
+      margin: 20px auto;
    }
 
-   header h1 {
-      font-size: 32px;
+   section {
+      padding: 20px;
+   }
+
+   /* Images */
+
+   .homepage-image,
+   .concerns-image {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px auto;
+   }
+
+   .concerns-image figcaption {
+      font-size: 0.8rem;
+   }
+
+   /* Thank You page */
+
+   .thank-you-section {
+      margin: 30px auto;
+      padding: 25px 20px;
+   }
+
+   .thank-you-section h2 {
+      font-size: 28px;
+   }
+
+   /* Back to Top */
+
+   #top-button {
+      right: 12px;
+      bottom: 12px;
+      padding: 10px 12px;
    }
 }
+
 
 /* ------------------------------
-   Fix Concerns Dropdown Layout
+   Very Small Screens
 ------------------------------ */
 
-#nav-menu .dropdown {
-   position: relative;
-}
+@media (max-width: 400px) {
 
-/* Dropdown container */
-#nav-menu .dropdown-menu {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: stretch;
-
-   gap: 0;
-   width: 260px;
-   min-width: 260px;
-
-   position: absolute;
-   top: 100%;
-   left: 0;
-   z-index: 1000;
-
-   padding: 5px 0;
-   margin: 0;
-
-   background-color: #1f2933;
-   border-radius: 6px;
-
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-/* Hide dropdown when closed */
-#nav-menu .dropdown-menu[hidden] {
-   display: none !important;
-}
-
-/* Stack each link */
-#nav-menu .dropdown-menu li {
-   display: block;
-   width: 100%;
-}
-
-/* Dropdown link styling */
-#nav-menu .dropdown-menu a {
-   display: block;
-   width: 100%;
-
-   padding: 12px 16px;
-
-   color: white;
-   text-align: left;
-   text-decoration: none;
-
-   border-radius: 0;
-   white-space: normal;
-}
-
-/* Hover and keyboard focus */
-#nav-menu .dropdown-menu a:hover,
-#nav-menu .dropdown-menu a:focus-visible {
-   background-color: #374151;
-   color: white;
-}
-
-/* Mobile dropdown */
-@media (max-width: 768px) {
-   #nav-menu .dropdown-menu {
-      position: static;
-      width: 100%;
-      min-width: 0;
-      box-shadow: none;
+   header h1 {
+      font-size: 28px;
    }
 
-   #nav-menu .dropdown-menu a {
-      padding-left: 30px;
+   section {
+      padding: 15px;
    }
+
+   .thank-you-section h2 {
+      font-size: 25px;
+   }
+}
+
+
+/* ------------------------------
+   Reduced Motion Accessibility
+------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+   html {
+      scroll-behavior: auto;
+   }
+
 }
