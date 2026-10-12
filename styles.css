@@ -720,28 +720,29 @@ tbody tr:nth-child(even) {
 }
 
 
+
 /* ------------------------------
-   Data Collection Image
+   Data Collection Image Alignment
 ------------------------------ */
 
 .page-image {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-
-   width: 90%;
-   max-width: 800px;
+   display: block;
+   width: 100%;
+   max-width: 1000px;
    margin: 30px auto;
-   padding: 0;
+   padding: 25px;
 
+   background-color: white;
+   border-radius: 8px;
+
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
    text-align: center;
 }
 
 .page-image img {
    display: block;
    width: 100%;
-   max-width: 800px;
+   max-width: 100%;
    height: auto;
 
    margin: 0 auto;
@@ -749,12 +750,13 @@ tbody tr:nth-child(even) {
 }
 
 .page-image figcaption {
-   width: 100%;
+   display: block;
    margin-top: 8px;
+   text-align: center;
+
    font-size: 0.85rem;
    line-height: 1.4;
    color: #555;
-   text-align: center;
 }
 
 .page-image figcaption a {
@@ -762,10 +764,14 @@ tbody tr:nth-child(even) {
    text-decoration: underline;
 }
 
+/* Mobile Image */
+
 @media (max-width: 768px) {
+
    .page-image {
       width: 100%;
-      max-width: 100%;
+      padding: 15px;
       margin: 20px auto;
    }
+
 }
