@@ -440,3 +440,49 @@ button:focus {
 
    color: #555555;
 }
+
+/* Concerns Page Image */
+
+.concerns-image {
+   width: 100%;
+   max-width: 750px;
+   margin: 30px auto;
+   text-align: center;
+}
+
+.concerns-image img {
+   display: block;
+   width: 100%;
+   height: auto;
+   aspect-ratio: 4 / 3;
+   object-fit: contain;
+   border-radius: 8px;
+}
+
+.concerns-image figcaption {
+   margin-top: 8px;
+   font-size: 0.85rem;
+   line-height: 1.4;
+   color: #555;
+   text-align: center;
+}
+
+.concerns-image a {
+   color: #005a9c;
+   text-decoration: underline;
+}
+
+.concerns-image a:hover {
+   color: #003d6b;
+}
+
+@media (max-width: 600px) {
+   .concerns-image {
+      max-width: 100%;
+      margin: 20px auto;
+   }
+
+   .concerns-image figcaption {
+      font-size: 0.8rem;
+   }
+}
