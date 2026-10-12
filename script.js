@@ -1,35 +1,111 @@
-// Flock Block Website JavaScript
+
+ // Flock Block Website JavaScript
 
 document.addEventListener("DOMContentLoaded", function () {
 
    // -----------------------------
    // Mobile Navigation Menu
    // -----------------------------
+
    const menuButton = document.getElementById("menu-button");
    const navMenu = document.getElementById("nav-menu");
 
    if (menuButton && navMenu) {
+
       menuButton.addEventListener("click", function () {
+
          navMenu.classList.toggle("show");
 
-         // Accessibility
          const isOpen = navMenu.classList.contains("show");
-         menuButton.setAttribute("aria-expanded", isOpen);
+
+         menuButton.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+         );
+
       });
+
+   }
+
+
+   // -----------------------------
+   // Concerns Dropdown Menu
+   // -----------------------------
+
+   const dropdownButton = document.querySelector(
+      ".dropdown-button"
+   );
+
+   const dropdownMenu = document.getElementById(
+      "concerns-submenu"
+   );
+
+   if (dropdownButton && dropdownMenu) {
+
+      function closeConcernsDropdown() {
+
+         dropdownMenu.hidden = true;
+
+         dropdownButton.setAttribute(
+            "aria-expanded",
+            "false"
+         );
+
+      }
+
+      dropdownButton.addEventListener("click", function () {
+
+         const isOpen =
+            dropdownButton.getAttribute("aria-expanded") === "true";
+
+         dropdownMenu.hidden = isOpen;
+
+         dropdownButton.setAttribute(
+            "aria-expanded",
+            String(!isOpen)
+         );
+
+      });
+
+      // Close dropdown when clicking outside
+
+      document.addEventListener("click", function (event) {
+
+         if (!event.target.closest(".dropdown")) {
+            closeConcernsDropdown();
+         }
+
+      });
+
+      // Close dropdown with Escape key
+
+      document.addEventListener("keydown", function (event) {
+
+         if (event.key === "Escape" &&
+             dropdownButton.getAttribute("aria-expanded") === "true") {
+
+            closeConcernsDropdown();
+            dropdownButton.focus();
+
+         }
+
+      });
+
    }
 
 
    // -----------------------------
    // Smooth Scrolling
    // -----------------------------
+
    const links = document.querySelectorAll('a[href^="#"]');
 
    links.forEach(function (link) {
+
       link.addEventListener("click", function (event) {
 
          const targetID = this.getAttribute("href");
 
-         // Ignore links that only contain #
          if (targetID === "#") {
             return;
          }
@@ -37,24 +113,28 @@ document.addEventListener("DOMContentLoaded", function () {
          const targetSection = document.querySelector(targetID);
 
          if (targetSection) {
+
             event.preventDefault();
 
             targetSection.scrollIntoView({
                behavior: "smooth"
             });
+
          }
+
       });
+
    });
 
 
    // -----------------------------
    // Back to Top Button
    // -----------------------------
+
    const topButton = document.getElementById("top-button");
 
    if (topButton) {
 
-      // Hide button when page first loads
       topButton.style.display = "none";
 
       window.addEventListener("scroll", function () {
@@ -75,12 +155,14 @@ document.addEventListener("DOMContentLoaded", function () {
          });
 
       });
+
    }
 
 
    // -----------------------------
    // Automatically Update Year
    // -----------------------------
+
    const year = document.getElementById("current-year");
 
    if (year) {

@@ -26,6 +26,8 @@
          and their impact on communities.
       </p>
 
+      <!-- Main Navigation -->
+
       <nav aria-label="Main navigation">
 
          <button
@@ -37,11 +39,69 @@
          </button>
 
          <ul id="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="concerns.html">Concerns</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="suggestions.html">Suggestions</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
+
+            <li>
+               <a href="index.html">Home</a>
+            </li>
+
+            <!-- Concerns Dropdown -->
+
+            <li class="dropdown">
+
+               <button
+                  class="dropdown-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="concerns-submenu">
+                  Concerns
+                  <span aria-hidden="true">&#9662;</span>
+               </button>
+
+               <ul
+                  id="concerns-submenu"
+                  class="dropdown-menu"
+                  hidden>
+
+                  <li>
+                     <a href="concerns.html">
+                        Overview of Concerns
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="privacy.html">
+                        Privacy
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="data-collection.html">
+                        Data Collection
+                     </a>
+                  </li>
+
+                  <li>
+                     <a href="transparency.html">
+                        Transparency and Oversight
+                     </a>
+                  </li>
+
+               </ul>
+
+            </li>
+
+            <li>
+               <a href="index.html#resources">Resources</a>
+            </li>
+
+            <li>
+               <a href="suggestions.html">Suggestions</a>
+            </li>
+
+            <li>
+               <a href="accessibility.html">Accessibility</a>
+            </li>
+
          </ul>
 
       </nav>
@@ -51,24 +111,30 @@
 
    <main>
 
+      <!-- Introduction -->
+
       <section>
 
          <h2>What is Flock Block?</h2>
 
          <p>
-            Flock Block is an informational website created to help people
-            understand automated license plate reader technology and the
-            concerns surrounding its use.
+            Flock Block is an informational website created
+            to help people understand automated license plate
+            reader technology and the concerns surrounding
+            its use.
          </p>
 
       </section>
 
 
+      <!-- Homepage Image -->
+
       <figure class="homepage-image">
 
          <img
             src="https://cdn.prod.website-files.com/6823a65a40e8919f48f55a9d/6a7cdbf385365c313fbe7c5a_6a5f89ac3a3c508db1893a1a_LPR-Lifestyle-2.jpeg"
-            alt="Automated license plate reader camera">
+            alt="Automated license plate reader camera"
+            loading="lazy">
 
          <figcaption>
 
@@ -81,7 +147,6 @@
                   rel="noopener noreferrer">
                   View original image
                </a>
-
             </small>
 
          </figcaption>
@@ -89,13 +154,16 @@
       </figure>
 
 
+      <!-- Concerns Section -->
+
       <section>
 
          <h2>Concerns About License Plate Readers</h2>
 
          <p>
-            Learn about privacy, data collection, and transparency concerns
-            surrounding automated license plate reader systems.
+            Learn about privacy, data collection, and
+            transparency concerns surrounding automated
+            license plate reader systems.
          </p>
 
          <a href="concerns.html">
@@ -111,46 +179,63 @@
 
          <h2>Learn More</h2>
 
-         <h3>ACLU: Privacy and Civil Liberties</h3>
+         <!-- ACLU Article -->
 
-         <p>
-            For more information about privacy and civil liberties concerns
-            surrounding Flock cameras, read this article from the ACLU.
-         </p>
+         <article>
 
-         <p>
-            <a
-               href="https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/despite-new-updates-flocks-creepy-cameras-remain-major-civil-liberties-threat"
-               target="_blank"
-               rel="noopener noreferrer">
-               Read the ACLU Article
-            </a>
-         </p>
+            <h3>ACLU: Privacy and Civil Liberties</h3>
+
+            <p>
+               For more information about privacy and
+               civil liberties concerns surrounding
+               Flock cameras, read this article
+               from the ACLU.
+            </p>
+
+            <p>
+               <a
+                  href="https://www.aclu.org/news/privacy-technology/tracking-alpr-cameras/despite-new-updates-flocks-creepy-cameras-remain-major-civil-liberties-threat"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Read the ACLU Article
+               </a>
+            </p>
+
+         </article>
 
 
-         <h3>NPR: Flock Cameras and Public Surveillance</h3>
+         <!-- NPR Article -->
 
-         <p>
-            This NPR article from August 21, 2026, discusses public
-            opposition to automated license plate reader cameras
-            and concerns about police surveillance. It provides
-            additional information about how communities are
-            responding to surveillance technology.
-         </p>
+         <article>
 
-         <p>
-            <a
-               href="https://www.npr.org/2026/08/21/nx-s1-5939851/flock-cameras-police-block-surveillance-vandalize"
-               target="_blank"
-               rel="noopener noreferrer">
-               Read the NPR Article
-            </a>
-         </p>
+            <h3>NPR: Flock Cameras and Public Surveillance</h3>
+
+            <p>
+               This NPR article from August 21, 2026,
+               discusses public opposition to automated
+               license plate reader cameras and concerns
+               about police surveillance. It provides
+               additional information about how communities
+               are responding to surveillance technology.
+            </p>
+
+            <p>
+               <a
+                  href="https://www.npr.org/2026/08/21/nx-s1-5939851/flock-cameras-police-block-surveillance-vandalize"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  Read the NPR Article
+               </a>
+            </p>
+
+         </article>
 
       </section>
 
    </main>
 
+
+   <!-- Footer -->
 
    <footer>
 
@@ -161,6 +246,8 @@
 
    </footer>
 
+
+   <!-- Back to Top Button -->
 
    <button
       id="top-button"
