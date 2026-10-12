@@ -1,5 +1,5 @@
 
- // Flock Block Website JavaScript
+// Flock Block Website JavaScript
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -10,18 +10,55 @@ document.addEventListener("DOMContentLoaded", function () {
    const menuButton = document.getElementById("menu-button");
    const navMenu = document.getElementById("nav-menu");
 
+   const dropdownButton = document.querySelector(
+      ".dropdown-button"
+   );
+
+   const dropdownMenu = document.getElementById(
+      "concerns-submenu"
+   );
+
+
+   // -----------------------------
+   // Concerns Dropdown Functions
+   // -----------------------------
+
+   function closeConcernsDropdown() {
+
+      if (dropdownButton && dropdownMenu) {
+
+         dropdownMenu.hidden = true;
+
+         dropdownButton.setAttribute(
+            "aria-expanded",
+            "false"
+         );
+
+      }
+
+   }
+
+
+   // -----------------------------
+   // Mobile Navigation Controls
+   // -----------------------------
+
    if (menuButton && navMenu) {
 
       menuButton.addEventListener("click", function () {
 
-         navMenu.classList.toggle("show");
-
-         const isOpen = navMenu.classList.contains("show");
+         const isOpen = navMenu.classList.toggle("show");
 
          menuButton.setAttribute(
             "aria-expanded",
             String(isOpen)
          );
+
+         // Close Concerns dropdown when mobile menu closes
+
+         if (!isOpen) {
+            closeConcernsDropdown();
+         }
 
       });
 
@@ -32,26 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
    // Concerns Dropdown Menu
    // -----------------------------
 
-   const dropdownButton = document.querySelector(
-      ".dropdown-button"
-   );
-
-   const dropdownMenu = document.getElementById(
-      "concerns-submenu"
-   );
-
    if (dropdownButton && dropdownMenu) {
-
-      function closeConcernsDropdown() {
-
-         dropdownMenu.hidden = true;
-
-         dropdownButton.setAttribute(
-            "aria-expanded",
-            "false"
-         );
-
-      }
 
       dropdownButton.addEventListener("click", function () {
 
@@ -67,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       });
 
+
       // Close dropdown when clicking outside
 
       document.addEventListener("click", function (event) {
@@ -77,20 +96,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
       });
 
+
       // Close dropdown with Escape key
 
       document.addEventListener("keydown", function (event) {
 
-         if (event.key === "Escape" &&
-             dropdownButton.getAttribute("aria-expanded") === "true") {
+         if (event.key === "Escape") {
 
-            closeConcernsDropdown();
-            dropdownButton.focus();
+            if (!dropdownMenu.hidden) {
+
+               closeConcernsDropdown();
+               dropdownButton.focus();
+
+            }
 
          }
 
       });
 
+
+      // Close dropdown when keyboard focus leaves it
+
+      document.addEventListener("focusin", function (event) {
+
+         if (!event.target.closest(".dropdown")) {
+            closeConcernsDropdown();
+         }
+
+      });
+
+   }
+
+
+   // -----------------------------
+   // Respect Reduced Motion Settings
+   // -----------------------------
+
+   const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+   );
+
+   function scrollBehavior() {
+      return reducedMotion.matches ? "auto" : "smooth";
    }
 
 
@@ -106,18 +153,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
          const targetID = this.getAttribute("href");
 
-         if (targetID === "#") {
+         // Ignore empty anchor links
+
+         if (!targetID || targetID === "#") {
             return;
          }
 
-         const targetSection = document.querySelector(targetID);
+         const targetSection = document.getElementById(
+            targetID.substring(1)
+         );
 
          if (targetSection) {
 
             event.preventDefault();
 
             targetSection.scrollIntoView({
-               behavior: "smooth"
+               behavior: scrollBehavior()
             });
 
          }
@@ -137,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       topButton.style.display = "none";
 
-      window.addEventListener("scroll", function () {
+      function updateTopButton() {
 
          if (window.scrollY > 300) {
             topButton.style.display = "block";
@@ -145,13 +196,18 @@ document.addEventListener("DOMContentLoaded", function () {
             topButton.style.display = "none";
          }
 
-      });
+      }
+
+      window.addEventListener("scroll", updateTopButton);
+
+      // Check when page first loads
+      updateTopButton();
 
       topButton.addEventListener("click", function () {
 
          window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            behavior: scrollBehavior()
          });
 
       });
