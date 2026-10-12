@@ -722,3 +722,83 @@ button:focus {
       font-size: 32px;
    }
 }
+
+/* ------------------------------
+   Fix Concerns Dropdown Layout
+------------------------------ */
+
+#nav-menu .dropdown {
+   position: relative;
+}
+
+/* Dropdown container */
+#nav-menu .dropdown-menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: stretch;
+
+   gap: 0;
+   width: 260px;
+   min-width: 260px;
+
+   position: absolute;
+   top: 100%;
+   left: 0;
+   z-index: 1000;
+
+   padding: 5px 0;
+   margin: 0;
+
+   background-color: #1f2933;
+   border-radius: 6px;
+
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Hide dropdown when closed */
+#nav-menu .dropdown-menu[hidden] {
+   display: none !important;
+}
+
+/* Stack each link */
+#nav-menu .dropdown-menu li {
+   display: block;
+   width: 100%;
+}
+
+/* Dropdown link styling */
+#nav-menu .dropdown-menu a {
+   display: block;
+   width: 100%;
+
+   padding: 12px 16px;
+
+   color: white;
+   text-align: left;
+   text-decoration: none;
+
+   border-radius: 0;
+   white-space: normal;
+}
+
+/* Hover and keyboard focus */
+#nav-menu .dropdown-menu a:hover,
+#nav-menu .dropdown-menu a:focus-visible {
+   background-color: #374151;
+   color: white;
+}
+
+/* Mobile dropdown */
+@media (max-width: 768px) {
+   #nav-menu .dropdown-menu {
+      position: static;
+      width: 100%;
+      min-width: 0;
+      box-shadow: none;
+   }
+
+   #nav-menu .dropdown-menu a {
+      padding-left: 30px;
+   }
+}
