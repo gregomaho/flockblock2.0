@@ -718,3 +718,54 @@ th {
 tbody tr:nth-child(even) {
    background-color: #f1f1f1;
 }
+
+
+/* ------------------------------
+   Data Collection Image
+------------------------------ */
+
+.page-image {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 90%;
+   max-width: 800px;
+   margin: 30px auto;
+   padding: 0;
+
+   text-align: center;
+}
+
+.page-image img {
+   display: block;
+   width: 100%;
+   max-width: 800px;
+   height: auto;
+
+   margin: 0 auto;
+   border-radius: 8px;
+}
+
+.page-image figcaption {
+   width: 100%;
+   margin-top: 8px;
+   font-size: 0.85rem;
+   line-height: 1.4;
+   color: #555;
+   text-align: center;
+}
+
+.page-image figcaption a {
+   color: #004a99;
+   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+   .page-image {
+      width: 100%;
+      max-width: 100%;
+      margin: 20px auto;
+   }
+}
